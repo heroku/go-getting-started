@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func hello(w http.ResponseWriter, r *http.Request) {
+func helloHandler(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Hello From Go!"))
 }
 
@@ -17,7 +17,7 @@ func main() {
 		log.Fatal("$PORT must be set")
 	}
 
-	http.HandleFunc("/", hello)
+	http.HandleFunc("/", helloHandler)
 
 	if err := http.ListenAndServe(":"+port, nil); err != nil {
 		log.Fatal(err)
