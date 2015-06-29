@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/codegangsta/negroni"
-	"github.com/unrolled/render"
+	"github.com/heroku/go-getting-started/Godeps/_workspace/src/github.com/codegangsta/negroni"
+	"github.com/heroku/go-getting-started/Godeps/_workspace/src/github.com/unrolled/render"
 )
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {

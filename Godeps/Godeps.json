@@ -1,8 +1,18 @@
 {
 	"ImportPath": "github.com/heroku/go-getting-started",
-	"GoVersion": "go1.4.2",
+	"GoVersion": "go1.4",
 	"Packages": [
 		"./..."
 	],
-	"Deps": []
+	"Deps": [
+		{
+			"ImportPath": "github.com/codegangsta/negroni",
+			"Comment": "v0.1-70-gc7477ad",
+			"Rev": "c7477ad8e330bef55bf1ebe300cf8aa67c492d1b"
+		},
+		{
+			"ImportPath": "github.com/unrolled/render",
+			"Rev": "d4edd394101358a4f8e462c43f884d9af99a4d30"
+		}
+	]
 }
