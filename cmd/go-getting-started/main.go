@@ -4,6 +4,9 @@ import (
 	"log"
 	"net/http"
 	"os"
+
+	"github.com/codegangsta/negroni"
+	"github.com/unrolled/render"
 )
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {
@@ -17,9 +20,17 @@ func main() {
 		log.Fatal("$PORT must be set")
 	}
 
-	http.HandleFunc("/", helloHandler)
+	r := render.New()
+	mux := http.NewServeMux()
 
-	if err := http.ListenAndServe(":"+port, nil); err != nil {
-		log.Fatal(err)
-	}
+	mux.HandleFunc("/html", helloHandler)
+
+	mux.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
+		// Assumes you have templates in ./templates
+		r.HTML(w, http.StatusOK, "index", nil)
+	})
+
+	n := negroni.Classic()
+	n.UseHandler(mux)
+	n.Run(":" + port)
 }
