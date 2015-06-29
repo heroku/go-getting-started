@@ -5,13 +5,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/heroku/go-getting-started/Godeps/_workspace/src/github.com/codegangsta/negroni"
-	"github.com/heroku/go-getting-started/Godeps/_workspace/src/github.com/unrolled/render"
+	"github.com/heroku/go-getting-started/Godeps/_workspace/src/github.com/gin-gonic/gin"
 )
-
-func helloHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Hello From Go!"))
-}
 
 func main() {
 	port := os.Getenv("PORT")
@@ -20,17 +15,14 @@ func main() {
 		log.Fatal("$PORT must be set")
 	}
 
-	r := render.New()
-	mux := http.NewServeMux()
+	router := gin.New()
+	router.Use(gin.Logger())
+	router.LoadHTMLGlob("templates/*.tmpl.html")
+	router.Static("/static", "static")
 
-	mux.HandleFunc("/html", helloHandler)
-
-	mux.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
-		// Assumes you have templates in ./templates
-		r.HTML(w, http.StatusOK, "index", nil)
+	router.GET("/", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index.tmpl.html", nil)
 	})
 
-	n := negroni.Classic()
-	n.UseHandler(mux)
-	n.Run(":" + port)
+	router.Run(":" + port)
 }
