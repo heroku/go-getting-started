@@ -8,8 +8,5 @@
     "example"
   ],
   "website": "http://github.com/heroku/go-getting-started",
-  "repository": "http://github.com/heroku/go-getting-started",
-  "env": {
-    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-go"
-  }
+  "repository": "http://github.com/heroku/go-getting-started"
 }
