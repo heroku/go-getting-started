@@ -1,8 +1,6 @@
 
 # go-getting-started
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
 A barebones Go app, which can easily be deployed to Heroku.  
 
 This application supports the [Getting Started with Go on Heroku](https://devcenter.heroku.com/articles/getting-started-with-go) article - check it out.
@@ -14,7 +12,7 @@ Make sure you have [Go](http://golang.org/doc/install) and the [Heroku Toolbelt]
 ```sh
 $ go get -u github.com/heroku/go-getting-started/...
 $ cd $GOPATH/src/github.com/heroku/go-getting-started
-$ foreman start web
+$ heroku local
 ```
 
 Your app should now be running on [localhost:5000](http://localhost:5000/).
@@ -28,6 +26,10 @@ $ heroku create
 $ git push heroku master
 $ heroku open
 ```
+or 
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 
 ## Documentation
 
