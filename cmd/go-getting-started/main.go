@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/heroku/go-getting-started/Godeps/_workspace/src/github.com/gin-gonic/gin"
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
