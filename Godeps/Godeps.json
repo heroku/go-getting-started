@@ -2,11 +2,21 @@
 	"ImportPath": "github.com/heroku/go-getting-started",
 	"GoVersion": "go1.6",
 	"Packages": [
-		"./cmd/..."
+		"./..."
 	],
 	"Deps": [
 		{
 			"ImportPath": "github.com/gin-gonic/gin",
+			"Comment": "v1.0rc1-110-g4cc2de6",
+			"Rev": "4cc2de6207f4128624cbdd16be30f64966c67c08"
+		},
+		{
+			"ImportPath": "github.com/gin-gonic/gin/binding",
+			"Comment": "v1.0rc1-110-g4cc2de6",
+			"Rev": "4cc2de6207f4128624cbdd16be30f64966c67c08"
+		},
+		{
+			"ImportPath": "github.com/gin-gonic/gin/render",
 			"Comment": "v1.0rc1-110-g4cc2de6",
 			"Rev": "4cc2de6207f4128624cbdd16be30f64966c67c08"
 		},
