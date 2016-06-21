@@ -1,9 +1,7 @@
 {
 	"ImportPath": "github.com/heroku/go-getting-started",
 	"GoVersion": "go1.6",
-	"Packages": [
-		"./..."
-	],
+	"GodepVersion": "v74",
 	"Deps": [
 		{
 			"ImportPath": "github.com/gin-gonic/gin",
