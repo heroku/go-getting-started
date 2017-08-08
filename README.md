@@ -17,7 +17,7 @@ $ heroku local
 
 Your app should now be running on [localhost:5000](http://localhost:5000/).
 
-You should also install [Godep](https://github.com/tools/godep) if you are going to add any dependencies to the sample app.
+You should also install [govendor](https://github.com/kardianos/govendor) if you are going to add any dependencies to the sample app.
 
 ## Deploying to Heroku
 
