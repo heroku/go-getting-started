@@ -1,25 +1,15 @@
 package main
 
 import (
-	"context"
-	"fmt"
 	"log"
 	"net/http"
 	"os"
 
 	"github.com/gin-gonic/gin"
-	"github.com/heroku/x/hmetrics"
+	_ "github.com/heroku/x/hmetrics/onload"
 )
 
 func main() {
-	err := hmetrics.Report(context.Background(), func(err error) error {
-		fmt.Println("hmetrics", err)
-		return nil
-	})
-	if err != nil {
-		log.Fatal("hmetrics setup error", err)
-	}
-
 	port := os.Getenv("PORT")
 
 	if port == "" {
