@@ -1,6 +1,0 @@
-build:
-  languages:
-    - heroku/go
-
-run:
-  web: go-getting-started
