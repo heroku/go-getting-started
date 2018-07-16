@@ -12,6 +12,7 @@ Make sure you have [Go](http://golang.org/doc/install) and the [Heroku Toolbelt]
 ```sh
 $ go get -u github.com/heroku/go-getting-started
 $ cd $GOPATH/src/github.com/heroku/go-getting-started
+$ go build
 $ heroku local
 ```
 
