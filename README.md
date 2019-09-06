@@ -12,7 +12,7 @@ Make sure you have [Go](http://golang.org/doc/install) version 1.12 or newer and
 ```sh
 $ git clone https://github.com/heroku/go-getting-started.git
 $ cd go-getting-started
-$ go build -o bin/go-getting-started -v .
+$ go build -o bin/go-getting-started -v . # or `go build -o bin/go-getting-started.exe -v .` in git bash
 github.com/mattn/go-colorable
 gopkg.in/bluesuncorp/validator.v5
 golang.org/x/net/context
