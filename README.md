@@ -49,4 +49,4 @@ For more information about using Go on Heroku, see these Dev Center articles:
 
 ## Local Changes
 
-Testing Review Apps in the context of Pipelines
+Testing Review-Apps in the context of Pipelines
