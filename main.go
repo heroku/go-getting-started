@@ -2,36 +2,29 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"net/http"
+	"os"
 
-	"github.com/Joojo7/go-getting-started/router"
-	"github.com/gorilla/mux"
-	"github.com/joho/godotenv"
+	"github.com/gin-gonic/gin"
+	_ "github.com/heroku/x/hmetrics/onload"
 )
 
-var MyEnv map[string]string
-
 func main() {
-	myEnv, err1 := godotenv.Read()
-	if err1 != nil {
-		log.Fatal(err1)
+	port := os.Getenv("PORT")
+	fmt.Print(port)
+
+	if port == "" {
+		port = "8000"
 	}
-	port := myEnv["PORT"]
 
-	myRouter := mux.NewRouter().StrictSlash(true)
+	router := gin.New()
+	router.Use(gin.Logger())
+	router.LoadHTMLGlob("templates/*.tmpl.html")
+	router.Static("/static", "static")
 
-	// ROuter files
-	router.Routes(myRouter)
-	router.FoodRoutes(myRouter)
-	router.OrderItemRoutes(myRouter)
-	router.TableRoutes(myRouter)
-	router.InvoiceRoutes(myRouter)
-	router.OrderRoutes(myRouter)
+	router.GET("/", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index.tmpl.html", nil)
+	})
 
-	fmt.Printf("listening on %v \n", port)
-	error1 := http.ListenAndServe(port, myRouter)
-	if error1 != nil {
-		panic(error1)
-	}
+	router.Run(":" + port)
 }
