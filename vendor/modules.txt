@@ -1,9 +1,3 @@
-# github.com/Joojo7/restaurant-order-system v0.0.0-20210108084836-dbce6a0ffc33
-github.com/Joojo7/restaurant-order-system/contollers
-github.com/Joojo7/restaurant-order-system/database
-github.com/Joojo7/restaurant-order-system/helpers
-github.com/Joojo7/restaurant-order-system/models
-github.com/Joojo7/restaurant-order-system/router
 # github.com/aws/aws-sdk-go v1.34.28
 github.com/aws/aws-sdk-go/aws
 github.com/aws/aws-sdk-go/aws/awserr
