@@ -3,6 +3,7 @@ module github.com/Joojo7/go-getting-started
 go 1.12
 
 require (
+	github.com/Joojo7/restaurant-order-system v0.0.0-20210108084836-dbce6a0ffc33 // indirect
 	github.com/gin-gonic/gin v0.0.0-20150626140855-4cc2de6207f4
 	github.com/golang/gddo v0.0.0-20201222204913-17b648fae295
 	github.com/gorilla/mux v1.8.0

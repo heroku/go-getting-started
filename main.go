@@ -1,29 +1,37 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
-	"os"
 
-	"github.com/gin-gonic/gin"
-	_ "github.com/heroku/x/hmetrics/onload"
+	"github.com/Joojo7/restaurant-order-system/router"
+	"github.com/gorilla/mux"
+	"github.com/joho/godotenv"
 )
 
+var MyEnv map[string]string
+
 func main() {
-	port := os.Getenv("PORT")
-
-	if port == "" {
-		log.Fatal("$PORT must be set")
+	myEnv, err1 := godotenv.Read()
+	if err1 != nil {
+		log.Fatal(err1)
 	}
+	port := myEnv["PORT"]
 
-	router := gin.New()
-	router.Use(gin.Logger())
-	router.LoadHTMLGlob("templates/*.tmpl.html")
-	router.Static("/static", "static")
+	myRouter := mux.NewRouter().StrictSlash(true)
 
-	router.GET("/", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.tmpl.html", nil)
-	})
+	// ROuter files
+	router.Routes(myRouter)
+	router.FoodRoutes(myRouter)
+	router.OrderItemRoutes(myRouter)
+	router.TableRoutes(myRouter)
+	router.InvoiceRoutes(myRouter)
+	router.OrderRoutes(myRouter)
 
-	router.Run(":" + port)
+	fmt.Printf("listening on %v \n", port)
+	error1 := http.ListenAndServe(port, myRouter)
+	if error1 != nil {
+		panic(error1)
+	}
 }

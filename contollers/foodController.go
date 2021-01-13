@@ -29,7 +29,6 @@ func GetFoods(response http.ResponseWriter, request *http.Request) {
 	response.Header().Add("Content-Type", "application/json")
 
 	result, err := foodCollection.Find(context.TODO(), bson.M{})
-	fmt.Print(result)
 
 	defer cancel()
 	if err != nil {
