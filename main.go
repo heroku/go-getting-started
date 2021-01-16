@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/Joojo7/restaurant-order-system/router"
+	"github.com/Joojo7/go-getting-started"
 	"github.com/gorilla/mux"
 	_ "github.com/heroku/x/hmetrics/onload"
 	"github.com/joho/godotenv"

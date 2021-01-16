@@ -1,7 +1,7 @@
 cloud.google.com/go v0.16.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
-github.com/Joojo7/restaurant-order-system v0.0.0-20210108084836-dbce6a0ffc33 h1:U5R0z3Dp+TllnWl5fHQRiJWUYJJ+fnWVpMo3K3zIe+I=
-github.com/Joojo7/restaurant-order-system v0.0.0-20210108084836-dbce6a0ffc33/go.mod h1:FuSeuM+MY/7/cA4/438mdvRTzruEJcEMsynSvpSlLoQ=
+github.com/Joojo7/go-getting-started v0.0.0-20210108084836-dbce6a0ffc33 h1:U5R0z3Dp+TllnWl5fHQRiJWUYJJ+fnWVpMo3K3zIe+I=
+github.com/Joojo7/go-getting-started v0.0.0-20210108084836-dbce6a0ffc33/go.mod h1:FuSeuM+MY/7/cA4/438mdvRTzruEJcEMsynSvpSlLoQ=
 github.com/aws/aws-sdk-go v1.34.28 h1:sscPpn/Ns3i0F4HPEWAVcwdIRaZZCuL7llJ2/60yPIk=
 github.com/aws/aws-sdk-go v1.34.28/go.mod h1:H7NKnBqNVzoTJpGfLrQkkD+ytBA93eiDYi/+8rV9s48=
 github.com/bradfitz/gomemcache v0.0.0-20170208213004-1952afaa557d/go.mod h1:PmM6Mmwb0LSuEubjR8N7PtNe1KxZLtOUHtbeikc5h60=
