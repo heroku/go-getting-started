@@ -1,1 +1,1 @@
-web: nodemon --exec go run server.go --signal SIGTERM
+web: go run server.go
