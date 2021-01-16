@@ -1,3 +1,9 @@
+# github.com/Joojo7/restaurant-order-system v0.0.0-20210108084836-dbce6a0ffc33
+github.com/Joojo7/restaurant-order-system/contollers
+github.com/Joojo7/restaurant-order-system/database
+github.com/Joojo7/restaurant-order-system/helpers
+github.com/Joojo7/restaurant-order-system/models
+github.com/Joojo7/restaurant-order-system/router
 # github.com/aws/aws-sdk-go v1.34.28
 github.com/aws/aws-sdk-go/aws
 github.com/aws/aws-sdk-go/aws/awserr
@@ -24,9 +30,6 @@ github.com/golang/gddo/httputil/header
 github.com/golang/snappy
 # github.com/gorilla/mux v1.8.0
 github.com/gorilla/mux
-# github.com/heroku/x v0.0.0-20171004170240-705849e307dd
-github.com/heroku/x/hmetrics
-github.com/heroku/x/hmetrics/onload
 # github.com/jmespath/go-jmespath v0.4.0
 github.com/jmespath/go-jmespath
 # github.com/joho/godotenv v1.3.0

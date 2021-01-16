@@ -5,29 +5,14 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/Joojo7/go-getting-started"
+	"github.com/Joojo7/restaurant-order-system/router"
 	"github.com/gorilla/mux"
-	_ "github.com/heroku/x/hmetrics/onload"
 	"github.com/joho/godotenv"
 )
 
+var MyEnv map[string]string
+
 func main() {
-	// port := os.Getenv("PORT")
-	// fmt.Print(port)
-
-	// if port == "" {
-	// 	port = "8000"
-	// }
-
-	// router := gin.New()
-	// router.Use(gin.Logger())
-	// router.LoadHTMLGlob("templates/*.tmpl.html")
-	// router.Static("/static", "static")
-
-	// router.GET("/tut", func(c *gin.Context) {
-	// 	c.HTML(http.StatusOK, "index.tmpl.html", nil)
-	// })
-
 	myEnv, err1 := godotenv.Read()
 	if err1 != nil {
 		log.Fatal(err1)
