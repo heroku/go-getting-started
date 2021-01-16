@@ -1,20 +1,21 @@
 package main
 
 import (
+	"golang-fifa-world-cup-web-service/data"
 	"golang-fifa-world-cup-web-service/handlers"
+	"log"
 	"net/http"
-	"os"
 
-	"github.com/subosito/gotenv"
+	"github.com/joho/godotenv"
 )
 
-func init() {
-	gotenv.Load()
-}
-
 func main() {
-
-	port := os.Getenv("PORT")
+	data.PrintUsage()
+	myEnv, err1 := godotenv.Read()
+	if err1 != nil {
+		log.Fatal(err1)
+	}
+	port := myEnv["PORT"]
 
 	http.HandleFunc("/", handlers.RootHandler)
 	http.HandleFunc("/winners", handlers.WinnersHandler)
