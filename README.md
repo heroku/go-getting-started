@@ -1,48 +1,36 @@
+# FIFA World Cup Winners
 
-# go-getting-started
+This project exposes a Web API for accessing historic data from
+the FIFA World Cup championship.
 
-A barebones Go app, which can easily be deployed to Heroku.
+## Running tests
 
-This application supports the [Getting Started with Go on Heroku](https://devcenter.heroku.com/articles/getting-started-with-go) article - check it out.
+A proper Go environment is required in order to run this project.
+Once setup, tests can be run with the following command:
 
-## Running Locally
+`go test -v ./handlers/`
 
-Make sure you have [Go](http://golang.org/doc/install) version 1.12 or newer and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
+## Running the server
 
-```sh
-$ git clone https://github.com/heroku/go-getting-started.git
-$ cd go-getting-started
-$ go build -o bin/go-getting-started -v . # or `go build -o bin/go-getting-started.exe -v .` in git bash
-github.com/mattn/go-colorable
-gopkg.in/bluesuncorp/validator.v5
-golang.org/x/net/context
-github.com/heroku/x/hmetrics
-github.com/gin-gonic/gin/render
-github.com/manucorporat/sse
-github.com/heroku/x/hmetrics/onload
-github.com/gin-gonic/gin/binding
-github.com/gin-gonic/gin
-github.com/heroku/go-getting-started
-$ heroku local
-```
+Once all tests are passing, the server can be started with
+the `go run server.go` command.
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
+## Testing the API manually
 
-## Deploying to Heroku
+Start the server with `go run server.go` and then
+use the example commands printed to the console to
+test the program.
 
-```sh
-$ heroku create
-$ git push heroku main
-$ heroku open
-```
+### Running with Docker
 
-or
+To build the image from the Dockerfile, run:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+`docker build -t project-fifa-world-cup .`
 
+To start an interactive shell, run:
 
-## Documentation
+`docker run -it --rm --name run-fifa project-fifa-world-cup`
 
-For more information about using Go on Heroku, see these Dev Center articles:
+From inside the shell, run the tests with:
 
-- [Go on Heroku](https://devcenter.heroku.com/categories/go)
+`go test handlers/*`

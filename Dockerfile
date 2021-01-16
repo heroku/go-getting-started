@@ -1,21 +1,15 @@
-FROM heroku/heroku:18-build as build
+FROM golang:1.13
 
-COPY . /app
-WORKDIR /app
+ENV CGO_ENABLED 0
 
-# Setup buildpack
-RUN mkdir -p /tmp/buildpack/heroku/go /tmp/build_cache /tmp/env
-RUN curl https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/go.tgz | tar xz -C /tmp/buildpack/heroku/go
+WORKDIR /src/app
 
-#Execute Buildpack
-RUN STACK=heroku-18 /tmp/buildpack/heroku/go/bin/compile /app /tmp/build_cache /tmp/env
+RUN addgroup --system projects && adduser --system projects --ingroup projects
 
-# Prepare final, minimal image
-FROM heroku/heroku:18
+RUN chown -R projects:projects /src/app
 
-COPY --from=build /app /app
-ENV HOME /app
-WORKDIR /app
-RUN useradd -m heroku
-USER heroku
-CMD /app/bin/go-getting-started
+USER projects
+
+COPY . .
+
+RUN go install -v ./...

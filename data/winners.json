@@ -1,0 +1,25 @@
+{
+  "winners": [
+    { "country": "France", "year": 2018 },
+    { "country": "Germany", "year": 2014 },
+    { "country": "Spain", "year": 2010 },
+    { "country": "Italy", "year": 2006 },
+    { "country": "Brazil", "year": 2002 },
+    { "country": "France", "year": 1998 },
+    { "country": "Brazil", "year": 1994 },
+    { "country": "West Germany", "year": 1990 },
+    { "country": "Argentina", "year": 1986 },
+    { "country": "Italy", "year": 1982 },
+    { "country": "Argentina", "year": 1978 },
+    { "country": "West Germany", "year": 1974 },
+    { "country": "Brazil", "year": 1970 },
+    { "country": "England", "year": 1966 },
+    { "country": "Brazil", "year": 1962 },
+    { "country": "Brazil", "year": 1958 },
+    { "country": "West Germany", "year": 1954 },
+    { "country": "Uruguay", "year": 1950 },
+    { "country": "Italy", "year": 1938 },
+    { "country": "Italy", "year": 1934 },
+    { "country": "Uruguay", "year": 1930 }
+  ]
+}

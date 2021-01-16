@@ -1,13 +1,24 @@
-GO_BUILD_ENV := CGO_ENABLED=0 GOOS=linux GOARCH=amd64
-DOCKER_BUILD=$(shell pwd)/.docker_build
-DOCKER_CMD=$(DOCKER_BUILD)/go-getting-started
+GOCMD=go
+GOTEST=$(GOCMD) test
+GORUN=${GOCMD} run
 
-$(DOCKER_CMD): clean
-	mkdir -p $(DOCKER_BUILD)
-	$(GO_BUILD_ENV) go build -v -o $(DOCKER_CMD) .
+all: test
 
-clean:
-	rm -rf $(DOCKER_BUILD)
+start: 
+				${GORUN} server.go
+test:
+				$(GOTEST) -v ./handlers/*
+test-1:
+				$(GOTEST) -v ./handlers/handlers.go \
+./handlers/handlers_test_helpers.go \
+./handlers/01_get_handler_test.go
 
-heroku: $(DOCKER_CMD)
-	heroku container:push web
+test-2:
+				$(GOTEST) -v ./handlers/handlers.go \
+./handlers/handlers_test_helpers.go \
+./handlers/02_post_handler_test.go
+
+test-3:
+				$(GOTEST) -v ./handlers/handlers.go \
+./handlers/handlers_test_helpers.go \
+./handlers/03_dispatch_handler_test.go
