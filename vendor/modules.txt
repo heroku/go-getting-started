@@ -1,17 +1,26 @@
 # github.com/gin-gonic/gin v0.0.0-20150626140855-4cc2de6207f4
+## explicit
 github.com/gin-gonic/gin
 github.com/gin-gonic/gin/binding
 github.com/gin-gonic/gin/render
 # github.com/heroku/x v0.0.0-20171004170240-705849e307dd
-github.com/heroku/x/hmetrics/onload
+## explicit
 github.com/heroku/x/hmetrics
+github.com/heroku/x/hmetrics/onload
 # github.com/manucorporat/sse v0.0.0-20150604091100-c142f0f1baea
+## explicit
 github.com/manucorporat/sse
 # github.com/mattn/go-colorable v0.0.0-20150625154642-40e4aedc8fab
+## explicit
 github.com/mattn/go-colorable
 # github.com/mattn/go-isatty v0.0.0-20150814002629-7fcbc72f853b
+## explicit
 github.com/mattn/go-isatty
+# github.com/stretchr/testify v1.3.0
+## explicit
 # golang.org/x/net v0.0.0-20150629084131-d9558e5c97f8
+## explicit
 golang.org/x/net/context
 # gopkg.in/bluesuncorp/validator.v5 v5.9.1
+## explicit
 gopkg.in/bluesuncorp/validator.v5
