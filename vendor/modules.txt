@@ -40,6 +40,12 @@ github.com/modern-go/concurrent
 # github.com/modern-go/reflect2 v0.0.0-20180701023420-4b7aa43c6742
 ## explicit
 github.com/modern-go/reflect2
+# github.com/russross/blackfriday v2.0.0+incompatible
+## explicit
+github.com/russross/blackfriday
+# github.com/shurcooL/sanitized_anchor_name v1.0.0
+## explicit
+github.com/shurcooL/sanitized_anchor_name
 # github.com/ugorji/go/codec v1.1.7
 ## explicit
 github.com/ugorji/go/codec
