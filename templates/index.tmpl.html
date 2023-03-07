@@ -36,8 +36,9 @@
         <li>If you are following the <a href="https://devcenter.heroku.com/articles/getting-started-with-go">Getting Started</a> guide, then please head back to the tutorial and follow the next steps!</li>
         <li>If you deployed this app by deploying the Heroku Button, then in a command line shell, run:</li>
         <ul>
-          <li><code>go get github.com/heroku/go-getting-started</code> - this will create a local copy of the source code for the app, compile and install the generated executables in <code>$GOPATH/bin</code></li>
-          <li><code>cd $GOPATH/src/github.com/heroku/go-getting-started</code> - change directory into the local source code repository</li>
+          <li><code>git clone https://github.com/heroku/go-getting-started</code> - get the code into your local environment</li>
+          <li><code>cd go-getting-started</code></li>
+          <li><code>go install .</code> - compile the binary and install it into your $GOPATH/bin</li>
           <li><code>heroku git:remote -a &lt;your-app-name&gt;</code> - associate the Heroku app with the repository</li>
           <li>You'll now be set up to run the app locally, or <a href="https://devcenter.heroku.com/articles/getting-started-with-go#push-local-changes">deploy changes</a> to Heroku</li>
         </ul>
