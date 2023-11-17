@@ -2,28 +2,35 @@ package main
 
 import (
 	"log"
-	"net/http"
-	"os"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	_ "github.com/heroku/x/hmetrics/onload"
+	"github.com/heroku/go-getting-started/inits"
+	"github.com/heroku/go-getting-started/routes"
+	"github.com/joho/godotenv"
 )
 
-func main() {
-	port := os.Getenv("PORT")
+func init() {
+	inits.LoadEnvVariables()
+	inits.ConDB()
 
-	if port == "" {
-		log.Fatal("$PORT must be set")
+	err := godotenv.Load(".env")
+	if err != nil {
+		log.Fatal("Error loading .env file")
 	}
+}
 
-	router := gin.New()
-	router.Use(gin.Logger())
-	router.LoadHTMLGlob("templates/*.tmpl.html")
-	router.Static("/static", "static")
+func main() {
+	//call gin function another example => gin.New()
+	r := gin.Default()
+	r.Use(cors.Default())
+	routes.Routes(r)
 
-	router.GET("/", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.tmpl.html", nil)
-	})
-
-	router.Run(":" + port)
+	//*gin.Context is default
+	// r.GET("/ping", func(c *gin.Context) {
+	// 	c.JSON(200, gin.H{
+	// 		"message": "pong",
+	// 	})
+	// })
+	r.Run() // listen and serve on 0.0.0.0:8080
 }
