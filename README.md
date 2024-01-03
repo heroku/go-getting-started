@@ -28,7 +28,7 @@ $ heroku local
 
 Your app should now be running on [localhost:5000](http://localhost:5000/).
 
-###Additional Steps for Running Locally in Windows
+##Additional Steps for Running Locally in Windows
 
 If you face any errors when running locally, alter Procfile so it’s contents are: "web: bin\go-getting-started.exe" instead of what is in the checkout. Don’t commit changes to Procfile though, otherwise your application’s web process won’t be able to start on Heroku.
 Also, check the logs in CMD to see the PORT on which the app is running, it could be in http://localhost:5001/
