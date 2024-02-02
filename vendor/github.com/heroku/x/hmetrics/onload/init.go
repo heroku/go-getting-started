@@ -18,13 +18,12 @@ information).
 
 usage:
 
-  import (
-	_ "github.com/heroku/x/hmetrics/onload"
-  )
+	  import (
+		_ "github.com/heroku/x/hmetrics/onload"
+	  )
 
 See the package documentation at https://godoc.org/github.com/heroku/x/hmetrics
 for more info about Heroku Go metrics and advanced usage.
-
 */
 package onload
 

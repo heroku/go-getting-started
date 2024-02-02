@@ -10,7 +10,7 @@ Package hmetrics is a self-contained client for Heroku Go runtime metrics.
 Typical usage is through the `github.com/heroku/x/hmetrics/onload` package
 imported like so:
 
-  import _ "github.com/heroku/x/hmetrics/onload"
+	import _ "github.com/heroku/x/hmetrics/onload"
 
 You can find more information about Heroku Go runtime metrics here:
 https://devcenter.heroku.com/articles/language-runtime-metrics-go
@@ -36,15 +36,13 @@ const (
 	interval = 20 * time.Second
 )
 
-var (
-	// DefaultEndpoint to report metrics to Heroku. The "HEROKU_METRICS_URL" env
-	// var is set by the Heroku runtime when the `runtime-heroku-metrics` labs
-	// flag is enabled. For more info see:
-	// https://devcenter.heroku.com/articles/language-runtime-metrics
-	//
-	// DefaultEndpoint must be changed before Report is called.
-	DefaultEndpoint = os.Getenv("HEROKU_METRICS_URL")
-)
+// DefaultEndpoint to report metrics to Heroku. The "HEROKU_METRICS_URL" env
+// var is set by the Heroku runtime when the `runtime-heroku-metrics` labs
+// flag is enabled. For more info see:
+// https://devcenter.heroku.com/articles/language-runtime-metrics
+//
+// DefaultEndpoint must be changed before Report is called.
+var DefaultEndpoint = os.Getenv("HEROKU_METRICS_URL")
 
 // AlreadyStarted represents an Error condition of already being started.
 type AlreadyStarted struct{}
