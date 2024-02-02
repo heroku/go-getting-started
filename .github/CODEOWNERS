@@ -7,3 +7,4 @@
 # by Dependabot, to reduce team review request noise.
 go.mod @joshwlewis
 go.sum @joshwlewis
+vendor/ @joshwlewis
