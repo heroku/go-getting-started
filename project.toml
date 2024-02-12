@@ -1,0 +1,17 @@
+[_]
+schema-version = "0.2"
+id = "com.tenharmsel.go-getting-started"
+name = "Go Getting Started"
+version = "1.0.0"
+
+[io.buildpacks]
+exclude = [
+  "/README.md"
+]
+
+[[io.buildpacks.group]]
+id = "me/inline_test"
+
+  [io.buildpacks.group.script]
+    api = "0.9"
+    inline = "echo 'Hello, world!'"
