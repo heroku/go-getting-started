@@ -22,7 +22,7 @@ version = "0.2.0"
 
 ### REVIEW APP CONFIGURATION
 [[com.heroku.stages.review.addons]]
-plan = "openredis"
+plan = "openredis:micro"
 
 [com.heroku.stages.review.env]
 SOME_KEY = "value"
