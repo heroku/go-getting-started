@@ -19,3 +19,18 @@ id = "me/inline_test"
 [[io.buildpacks.group]]
 id = "heroku/go"
 version = "0.2.0"
+
+### REVIEW APP CONFIGURATION
+[[com.heroku.stages.review.addons]]
+plan = "openredis"
+
+[com.heroku.stages.review.env]
+SOME_KEY = "value"
+SECRET_TOKEN = { description = "A secret key for verifying the integrity of signed cookies.", generator = "secret" }
+
+[com.heroku.stages.review.formation]
+web = { quantity = 2, size = "basic" }
+
+[com.heroku.stages.review.scripts]
+postdeploy = "echo 'HELLO WORLD'"
+pr-predestroy = "echo 'GOODBYE WORLD'"
