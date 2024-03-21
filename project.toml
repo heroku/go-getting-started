@@ -21,6 +21,9 @@ id = "heroku/go"
 version = "0.2.0"
 
 ### REVIEW APP CONFIGURATION
+[com.heroku.stages.review]
+stack = "heroku-22"
+
 [com.heroku.stages.review.env]
 SOME_KEY = "value"
 SECRET_TOKEN = { description = "A secret key for verifying the integrity of signed cookies.", generator = "secret" }
