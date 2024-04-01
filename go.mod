@@ -5,7 +5,7 @@ go 1.20
 
 require (
 	github.com/gin-gonic/gin v1.9.1
-	github.com/heroku/x v0.1.0
+	github.com/heroku/x v0.2.0
 )
 
 require (
