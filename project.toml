@@ -15,3 +15,15 @@ id = "me/inline_test"
   [io.buildpacks.group.script]
     api = "0.9"
     inline = "echo 'Hello, world!'"
+
+[[io.buildpacks.group]]
+id = "heroku/go"
+version = "0.2.0"
+
+### REVIEW APP CONFIGURATION
+[com.heroku.stages.review]
+stack = "cnb"
+
+[com.heroku.stages.review.env]
+SOME_KEY = "value"
+SECRET_TOKEN = { description = "A secret key for verifying the integrity of signed cookies.", generator = "secret" }
