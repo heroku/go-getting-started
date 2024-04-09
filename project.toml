@@ -28,9 +28,6 @@ stack = "cnb"
 SOME_KEY = "value"
 SECRET_TOKEN = { description = "A secret key for verifying the integrity of signed cookies.", generator = "secret" }
 
-[com.heroku.stages.review.formation]
-web = { quantity = 2, size = "Private-S" }
-
 [com.heroku.stages.review.scripts]
 postdeploy = "echo 'HELLO WORLD'"
 pr-predestroy = "echo 'GOODBYE WORLD'"
