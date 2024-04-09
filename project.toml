@@ -22,7 +22,7 @@ version = "0.2.0"
 
 ### REVIEW APP CONFIGURATION
 [com.heroku.stages.review]
-stack = "heroku-22"
+stack = "cnb"
 
 [com.heroku.stages.review.env]
 SOME_KEY = "value"
