@@ -29,7 +29,7 @@
       <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
       <ul>
         <li>This app was deployed to Heroku using Git.</li>
-        <li>When Heroku received the source code, it fetched all the dependencies in the <a href="https://github.com/heroku/go-getting-started/blob/main/Gemfile">Gemfile</a>, creating a deployable build artifact.</li>
+        <li>When Heroku received the source code it used the go tool chain to compile the application along with any vendored <a href="https://devcenter.heroku.com/articles/go-support#supported-dependency-vendor-managers">dependencies</a>, creating a deployable build artifact.</li>
         <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the build artifact can be mounted and executed.</li>
         <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
       </ul>
