@@ -26,7 +26,7 @@ github.com/heroku/go-getting-started
 $ heroku local
 ```
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
+Your app should now be running on [localhost:5006](http://localhost:5006/).
 
 ## Deploying to Heroku
 
