@@ -7,29 +7,6 @@ This application supports the tutorials for both the [Cedar and Fir generations]
 - [Getting Started on Heroku with Go](https://devcenter.heroku.com/articles/getting-started-with-go)
 - [Getting Started on Heroku Fir with Go](https://devcenter.heroku.com/articles/getting-started-with-go-fir)
 
-## Running Locally
-
-Make sure you have [Go](http://golang.org/doc/install) version 1.17 or newer and the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) installed.
-
-```sh
-$ git clone https://github.com/heroku/go-getting-started.git
-$ cd go-getting-started
-$ go build -o bin/go-getting-started -v . # or `go build -o bin/go-getting-started.exe -v .` in git bash
-github.com/mattn/go-colorable
-gopkg.in/bluesuncorp/validator.v5
-golang.org/x/net/context
-github.com/heroku/x/hmetrics
-github.com/gin-gonic/gin/render
-github.com/manucorporat/sse
-github.com/heroku/x/hmetrics/onload
-github.com/gin-gonic/gin/binding
-github.com/gin-gonic/gin
-github.com/heroku/go-getting-started
-$ heroku local
-```
-
-Your app should now be running on [localhost:5006](http://localhost:5006/).
-
 ## Deploying to Heroku
 
 Using resources for this example app counts towards your usage. [Delete your app](https://devcenter.heroku.com/articles/heroku-cli-commands#heroku-apps-destroy) and [database](https://devcenter.heroku.com/articles/heroku-postgresql#removing-the-add-on) as soon as you are done experimenting to control costs.
