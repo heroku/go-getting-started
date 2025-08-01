@@ -28,8 +28,8 @@ github.com/goccy/go-json v0.10.2/go.mod h1:6MelG93GURQebXPDq3khkgXZkazVtN9CRI+MG
 github.com/google/go-cmp v0.5.5 h1:Khx7svrCpmxxtHBq5j2mp/xVjsi8hQMfNLvJFAlrGgU=
 github.com/google/go-cmp v0.5.5/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
 github.com/google/gofuzz v1.0.0/go.mod h1:dBl0BpW6vV/+mYPU4Po3pmUjxk6FQPldtuIdl/M65Eg=
-github.com/heroku/x v0.4.3 h1:HF1P4Mu79BKDVk4pt+oRDpcOSTRTpHq28RYAOkuJmds=
-github.com/heroku/x v0.4.3/go.mod h1:htQnSDQPP7rNbrOQ8rczL7tbdNtQHXCPoSxYomu+eI8=
+github.com/heroku/x v0.5.0 h1:s5R0vp9j0enY+ZIc2kk54hhDkJrHjC4E64i98gmSZLQ=
+github.com/heroku/x v0.5.0/go.mod h1:m6r9CVMysn6E9K7s3yE66TM7O+nWFqr7G2ZMqS4TLjU=
 github.com/json-iterator/go v1.1.12 h1:PV8peI4a0ysnczrg+LtxykD8LfKY9ML6u2jnxaEnrnM=
 github.com/json-iterator/go v1.1.12/go.mod h1:e30LSqwooZae/UwlEbR2852Gd8hjQvJoHmT4TnhNGBo=
 github.com/klauspost/cpuid/v2 v2.0.9/go.mod h1:FInQzS24/EEf25PyTYn52gqo7WaD8xa0213Md/qVLRg=
