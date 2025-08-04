@@ -5,7 +5,7 @@ go 1.23.0
 
 require (
 	github.com/gin-gonic/gin v1.10.1
-	github.com/heroku/x v0.4.3
+	github.com/heroku/x v0.5.0
 )
 
 require (
