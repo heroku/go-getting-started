@@ -1,3 +1,4 @@
 .env
 .docker_build/
 bin/
+vendor/
