@@ -1,3 +1,19 @@
+.deploy-banner {
+  background: linear-gradient(90deg, #00c853, #00e676);
+  color: #1b5e20;
+  text-align: center;
+  padding: 12px 20px;
+  font-weight: bold;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
 .jumbotron {
   background: #532F8C;
   color: white;
