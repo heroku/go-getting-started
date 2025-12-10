@@ -11,7 +11,7 @@ This application supports the tutorials for both the [Cedar and Fir generations]
 
 Make sure you have [Go](http://golang.org/doc/install) version 1.17 or newer and the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) installed.
 
-```sh
+```shf
 $ git clone https://github.com/heroku/go-getting-started.git
 $ cd go-getting-started
 $ go build -o bin/go-getting-started -v . # or `go build -o bin/go-getting-started.exe -v .` in git bash
