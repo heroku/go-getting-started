@@ -1,5 +1,5 @@
 .DS_Store
 .env
-.docker_build/
-bin/
-vendor/
+
+# Binary produced by a local `go build`
+/go-getting-started
