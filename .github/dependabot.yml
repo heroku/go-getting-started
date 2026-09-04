@@ -4,6 +4,9 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    allow:
+      # Update transitive dependencies too.
+      - dependency-type: "all"
     groups:
       go-dependencies:
         update-types:
